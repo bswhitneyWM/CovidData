@@ -102,4 +102,4 @@ def ShowCovidTracking(state, metric, update_first=False):
     plt.show()
 ```
 
-Using these functions I am able to produce graphs of positive cases or deaths for any state I want. One example in Massachuetts can be seen ![Here](https://github.com/bswhitneyWM/CovidData/blob/main/CovidMA.png?raw=true)
+Using these functions I am able to produce graphs of positive cases or deaths for any state I want. One example in Massachuetts can be seen below: ![Image](https://github.com/bswhitneyWM/CovidData/blob/main/CovidMA.png?raw=true)
