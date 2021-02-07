@@ -1,14 +1,12 @@
-## Welcome to GitHub Pages
+## Project Description
 
-You can use the [editor on GitHub](https://github.com/bswhitneyWM/CovidData/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+In this project I grab data from [covidtracking.com](https://api.covidtracking.com/v1/states/daily.csv) to explore the current status of COVID-19 in a variety of different states. The data is updated daily, and the data, such as number of deaths or cases, is separated on a state by state basis.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Functions
 
-### Markdown
+Below are the functions I used to either update the data or load the most recent copy, and plot a given metric (such as # of deaths) for a given state.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
+```python
 def UpdateCovidTracking():
     """ Function will download current copy of the historic state data from
     the covid tracking project"""
@@ -102,16 +100,6 @@ def ShowCovidTracking(state, metric, update_first=False):
         plt.ylabel("Positive Cases")
         plt.title("Covid-19 positive cases in " + state)
     plt.show()
-
-[Link](url) and ![Image](src)
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/bswhitneyWM/CovidData/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+Using these functions I am able to produce graphs of positive cases or deaths for any state I want. One example in Massachuetts is ![Image](CovidMA.png)
